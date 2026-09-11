@@ -6,7 +6,7 @@
 
 ---
 
-# 🚀 Estructura de Datos (Data Structures)
+# 🚀 Estructura de Datos 
 
 ¡Bienvenido! Este repositorio contiene explicaciones, implementaciones y análisis de complejidad de las **Estructuras de Datos** más utilizadas en las ciencias de la computación y desarrollo de software.
 
