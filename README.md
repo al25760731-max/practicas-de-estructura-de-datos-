@@ -1,9 +1,13 @@
 ## 📌 Información del estudiante
 
 **Nombre:** angel manuel burgoin cadena 
+
 **Carrera:** Ingeniería en Sistemas Computacionales
+
 **Grupo:** 3SS
+
 **matricula** 25760731
+
 **profesor** Maria de Lourdes Aguillon
 ---
 
