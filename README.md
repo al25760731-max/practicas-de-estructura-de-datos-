@@ -6,9 +6,9 @@
 
 **Grupo:** 3SS
 
-**matricula** 25760731
+**matricula:** 25760731
 
-**profesor** Maria de Lourdes Aguillon
+**profesor:** Maria de Lourdes Aguillon
 ---
 
 # 🚀 Estructura de Datos 
