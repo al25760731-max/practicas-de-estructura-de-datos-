@@ -5,13 +5,23 @@ using namespace std;
 
 int main() {
     string nombre;
-    int edad;
+    int edad; 
+    int opcion;
     float calificacion1, calificacion2, calificacion3, promedio;
 
-    // Pedir datos
-    cout << "Nombre: ";
-    cin >> nombre;
+    cout << "== SISTEMA DE CALIFICACIONES ==" <<endl;
+    cout << "1. registrar estudiante" <<endl;
+    cout << "2. ver informacion del programa" <<endl;
+    cout << "3. salir" <<endl;
+    cout << "opcion: ";
+    cin >>opcion;
 
+    switch(opcion){
+    case 1: { 
+         // Pedir datos
+    cout << "Nombre: ";
+
+    cin >> nombre;
     cout << "Edad: ";
     cin >> edad;
 
@@ -25,10 +35,10 @@ int main() {
     cin >> calificacion1;
 
     cout << "Calificacion 2: ";
-    cin >> calificacion2;
-
+    cin >> calificacion2; 
+    
     cout << "Calificacion 3: ";
-    cin >> calificacion3;
+    cin >> calificacion3; 
 
     // Validar calificaciones
     if (calificacion1 < 0 || calificacion1 > 10 || 
@@ -37,7 +47,6 @@ int main() {
         cout << "Calificacion invalida" << endl;
         return 1;
     }
-
     // Calcular promedio
     promedio = (calificacion1 + calificacion2 + calificacion3) / 3;
 
@@ -57,6 +66,21 @@ int main() {
     } else {
         cout << "Estado: REPROBADO" << endl;
     }
-
+           break;
+    }
+    case 2:{
+    cout << "sistema de calificaciones " <<endl;
+        break; 
+    }  
+    case 3:{
+        cout << "cerrando programa" <<endl;
+        break;
+    }
+    default: {
+        cout << "Opcion invalida. Intente de nuevo." << endl;
+            break;
+    }
+  
+}
     return 0;
 }
