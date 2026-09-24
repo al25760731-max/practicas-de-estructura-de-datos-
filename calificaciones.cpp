@@ -15,14 +15,18 @@ int main()
     float masAltas = -1;
     float masBajas = 11;
     float promedio;
-    
+   do { 
     cout << "== SISTEMA DE CALIFICACIONES ==" <<endl;
     cout << "1. registrar estudiante" <<endl;
     cout << "2. ver informacion del programa" <<endl;
     cout << "3. salir" <<endl;
     cout << "opcion: ";
-    cin >>opcion; 
-
+    cin >>opcion;  
+    if (cin.fail()){
+        cin.clear();
+        cin.ignore(10000, '\n');
+    opcion = 0;
+    }
    switch (opcion){
     case 1:{ 
        // Pedir datos
@@ -45,7 +49,7 @@ int main()
    while (cin.fail() || numCalificaciones <= 0) {
         cin.clear();
         cin.ignore(10000, '\n');
-        cout << "Cantidad invalida de calificaciones, ingresa un numero maypr a 0 ";
+        cout << "Cantidad invalida de calificaciones, ingresa un numero mayor a 0 ";
         cin >> numCalificaciones;
     }
 
@@ -57,7 +61,7 @@ int main()
     while(cin.fail() || calificaciones < 0 || calificaciones > 10 ){
         cin.clear();
         cin.ignore(10000, '\n');
-        cout <<"calificacion invalida.  ingrese uin numero del 0 al 10";
+        cout <<"calificacion invalida.  ingrese un numero del 0 al 10";
         cin >> calificaciones; 
     }
     suma += calificaciones;
@@ -115,5 +119,6 @@ int main()
     cout << "Opcion invalida. Intente de nuevo." << endl;
     break;
   }
+  } while (opcion != 3);
   return 0;
-} 
+   }
