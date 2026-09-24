@@ -33,26 +33,32 @@ int main()
         cin >> edad;
 
         // Validar edad
-        if (edad < 0 || edad > 120) {
-        cout << "Edad invalida" << endl;
-        return 1;
+       while (cin.fail() || edad < 0 || edad > 120) {
+        cin.clear();
+        cin.ignore(10000, '\n'); 
+        cout << "Edad invalida. solo se puede ingresar del 0 al 120" << endl;
+        cin >> edad; 
     }
     cout << "cuantas calificaciones deseas registrar?: ";
     cin >> numCalificaciones;
 
-   if (numCalificaciones <= 0) {
-    cout << "Cantidad invalida de calificaciones" << endl;
-    return 1;
+   while (cin.fail() || numCalificaciones <= 0) {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Cantidad invalida de calificaciones, ingresa un numero maypr a 0 ";
+        cin >> numCalificaciones;
     }
 
     for (int i = 1; i <= numCalificaciones; i++) {
-    cout << "calificacion " << i << ": ";
-    cin >> calificaciones;
+        cout << "calificacion " << i << ": ";
+        cin >> calificaciones;
 
     // Validar calificaciones
-    if (calificaciones < 0 || calificaciones > 10 ){
-      cout <<"calificacion invalida" << endl;
-      return 1; 
+    while(cin.fail() || calificaciones < 0 || calificaciones > 10 ){
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout <<"calificacion invalida.  ingrese uin numero del 0 al 10";
+        cin >> calificaciones; 
     }
     suma += calificaciones;
 
@@ -105,10 +111,9 @@ int main()
        cout << "cerrando programa" <<endl;
      break;
     }
-    default:{
+    default:
     cout << "Opcion invalida. Intente de nuevo." << endl;
     break;
-    }
   }
   return 0;
 } 
